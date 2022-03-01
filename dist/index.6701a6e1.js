@@ -23882,7 +23882,7 @@ MovieView.propTypes = {
         Title: _propTypesDefault.default.string.isRequired,
         Description: _propTypesDefault.default.string.isRequired,
         ImagePath: _propTypesDefault.default.string.isRequired,
-        Genre: _propTypesDefault.default.string.isRequired
+        Genre: _propTypesDefault.default.object.isRequired
     }).isRequired,
     onBackClick: _propTypesDefault.default.func.isRequired
 };

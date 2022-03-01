@@ -34,7 +34,7 @@ MovieView.propTypes = {
       Title: PropTypes.string.isRequired,
       Description: PropTypes.string.isRequired,
       ImagePath: PropTypes.string.isRequired,
-      Genre: PropTypes.string.isRequired
+      Genre: PropTypes.object.isRequired
   }).isRequired,
   onBackClick: PropTypes.func.isRequired
 };
