@@ -11,7 +11,7 @@ export function RegistrationView(props) {
     console.log(username, password, email, dateofbirth);
     /* Send a request to the server for authentication */
     /* then call props.onLoggedIn(username) */
-    // props.onLoggedIn(username);
+    props.onLoggedIn(username);
   };
   
 
@@ -37,3 +37,11 @@ export function RegistrationView(props) {
     </form>
   );
 }
+
+MovieView.propTypes = {
+  username: PropTypes.string.isrequired,
+  password: PropTypes.string.isrequired,
+  email: PropTypes.string.isrequired,
+  dateofbirth: PropTypes.string.isrequired,
+  handleSubmit: PropTypes.func.isRequired
+};
