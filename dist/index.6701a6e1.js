@@ -25700,10 +25700,10 @@ function RegistrationView(props) {
 _s(RegistrationView, "77CBJm1x9Eq2CvjetLWqBrafkCI=");
 _c = RegistrationView;
 RegistrationView.propTypes = {
-    username: _propTypesDefault.default.string.isrequired,
-    password: _propTypesDefault.default.string.isrequired,
-    email: _propTypesDefault.default.string.isrequired,
-    dateofbirth: _propTypesDefault.default.string.isrequired,
+    username: _propTypesDefault.default.string.isRequired,
+    password: _propTypesDefault.default.string.isRequired,
+    email: _propTypesDefault.default.string.isRequired,
+    dateofbirth: _propTypesDefault.default.string.isRequired,
     handleSubmit: _propTypesDefault.default.func.isRequired
 };
 var _c;
