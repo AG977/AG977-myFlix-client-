@@ -38,11 +38,3 @@ return (
   </form>
   );
 }
-
-RegistrationView.propTypes = {
-  username: PropTypes.string.isRequired,
-  password: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  dateofbirth: PropTypes.string.isRequired,
-  handleSubmit: PropTypes.func.isRequired
-};

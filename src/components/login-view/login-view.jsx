@@ -29,11 +29,6 @@ return (
  );
 }
 
-LoginView.propTypes = {
-  username: PropTypes.string,
-  password: PropTypes.string,
-  handleSubmit: PropTypes.func,
-};
 
 
 

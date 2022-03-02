@@ -25550,11 +25550,6 @@ function LoginView(props) {
 }
 _s(LoginView, "9FY2cPL9VBDmuhjwpF2ik6flsHs=");
 _c = LoginView;
-LoginView.propTypes = {
-    username: _propTypesDefault.default.string,
-    password: _propTypesDefault.default.string,
-    handleSubmit: _propTypesDefault.default.func
-};
 var _c;
 $RefreshReg$(_c, "LoginView");
 
@@ -25697,13 +25692,6 @@ function RegistrationView(props) {
 }
 _s(RegistrationView, "77CBJm1x9Eq2CvjetLWqBrafkCI=");
 _c = RegistrationView;
-RegistrationView.propTypes = {
-    username: _propTypesDefault.default.string.isRequired,
-    password: _propTypesDefault.default.string.isRequired,
-    email: _propTypesDefault.default.string.isRequired,
-    dateofbirth: _propTypesDefault.default.string.isRequired,
-    handleSubmit: _propTypesDefault.default.func.isRequired
-};
 var _c;
 $RefreshReg$(_c, "RegistrationView");
 
