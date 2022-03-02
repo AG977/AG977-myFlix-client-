@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import propTypes from 'prop-types';
 
 export function LoginView(props) {
   const [ username, setUsername ] = useState('');
