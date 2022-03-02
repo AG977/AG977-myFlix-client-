@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 export function LoginView(props) {
   const [ username, setUsername ] = useState('');
@@ -29,6 +30,13 @@ return (
  );
 }
 
+LoginView.propTypes = {
+  user: propTypes.shape({
+    username: PropTypes.string,
+    password: PropTypes.string,
+  }),
+  handleSubmit: PropTypes.func,
+};
 
 
 
