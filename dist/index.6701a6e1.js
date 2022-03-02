@@ -25536,10 +25536,8 @@ function LoginView(props) {
                 __self: this,
                 children: "Submit"
             }),
-            /*#__PURE__*/ _jsxRuntime.jsx("button", {
+            /*#__PURE__*/ _jsxRuntime.jsx("a", {
                 href: "../registration-view/registration-view",
-                type: "Register",
-                onClick: handleSubmit,
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
                     lineNumber: 27

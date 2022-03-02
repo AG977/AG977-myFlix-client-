@@ -24,7 +24,7 @@ return (
       <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
     </label>
     <button type="submit" onClick={handleSubmit}>Submit</button>
-    <button href="../registration-view/registration-view" type="Register" onClick={handleSubmit}>Register now!</button>
+    <a href="../registration-view/registration-view" >Register now!</a>
   </form>
  );
 }
@@ -34,6 +34,7 @@ LoginView.propTypes = {
   password: PropTypes.string,
   handleSubmit: PropTypes.func,
 };
+
 
 
 
