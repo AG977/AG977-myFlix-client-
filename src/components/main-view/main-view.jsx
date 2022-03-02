@@ -1,4 +1,7 @@
 import React from 'react';
+import axios from 'axios';
+import { RegistrationView } from '../registration-view/registration-view';
+import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
@@ -7,32 +10,53 @@ class MainView extends React.Component {
   constructor(){
     super();
     this.state = {
-      movies: [
-        { _id: 1, Title: 'shrek', Description: 'When a green ogre named Shrek discovers his swamp has been swamped with all sorts of fairytale creatures by the scheming Lord Farquaad, Shrek sets out with a very loud donkey by his side to persuade Farquaad to give Shrek his swamp back. Instead, a deal is made.', ImagePath: 'S1.png'},
-        { _id: 2, Title: 'Madagascar', Description: 'A group of animals who have spent all their life in a New York zoo end up in the jungles of Madagascar, and must adjust to living in the wild.', ImagePath: '../../../images/M1.png'},
-        { _id: 3, Title: 'The Lion King', Description: 'The Lion King tells the story of Simba (Swahili for lion), a young lion who is to succeed his father, Mufasa, as King of the Pride Lands.', ImagePath: '../../../images/TLK.png'}
-      ],
-      selectedMovie: null
+      movies: [],
+      selectedMovie: null,
+      user: null
     };
   }
 
-  setSelectedMovie(newSelectedMovie) {
+  componentDidMount(){
+    axios.get('https://myflixchill.herokuapp.com/movies')
+      .then(response => {
+        this.setState({
+          movies: response.data
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
+  setSelectedMovie(movie) {
     this.setState({
-      selectedMovie: newSelectedMovie
+      selectedMovie: movie
+    });
+  }
+
+  /* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/
+  onLoggedIn(user) {
+    this.setState({
+      user
     });
   }
 
  render() {
-   const { movies, selectedMovie } = this.state;
+   const { movies, selectedMovie, user } = this.state;
 
-   if (movies.length === 0) return <div className="main-view">The list is empty!</div>;
+   /* If there is no user, the LoginView is rendered. If there is a user logged in, the user details are *passed as a prop to the LoginView*/
+   if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+   if (!user) return <RegistrationView onLoggedIn={user => this.onLoggedIn(user)} />;
+
+   // Before the movies have been loaded
+   if (movies.length === 0) return <div className="main-view" />;
 
    return (
      <div className="main-view">
         {selectedMovie
         ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
         : movies.map(movie => (
-          <MovieCard key={movie._id} movie={movie} onMovieClick={(movie) => { this.setSelectedMovie(movie) }}/>
+          <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }}/>
         ))
       }
      </div>
