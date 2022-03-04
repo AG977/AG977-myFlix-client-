@@ -30,12 +30,9 @@ return (
 }
 
 LoginView.propTypes = {
-  user: propTypes.shape({
     username: PropTypes.string,
     password: PropTypes.string,
-  }),
-  handleSubmit: PropTypes.func,
-};
+  };
 
 
 
