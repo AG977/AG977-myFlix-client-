@@ -58,12 +58,12 @@ class MainView extends React.Component {
     <Row className="main-view justify-content-md-center">
       {selectedMovie
         ? (
-          <Col xs ={8} sm={8} md={8} lg={8}>
+          <Col xs ={12} sm={8} md={8} lg={8}>
             <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
           </Col>
         )
         : movies.map(movie => (
-          <Col xs ={6} sm={4} md={3} lg={3}>
+          <Col xs ={12} sm={6} md={4} lg={3}>
             <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }}/>
           </Col>
         ))
