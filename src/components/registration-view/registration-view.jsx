@@ -41,6 +41,5 @@ return (
 }
 
 RegistrationView.propTypes = {
-  username: PropTypes.string,
-  password: PropTypes.string,
+  onLoggedIn: PropTypes.func.isRequired
 };
