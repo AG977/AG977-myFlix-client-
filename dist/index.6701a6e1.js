@@ -26157,13 +26157,7 @@ function RegistrationView(props) {
 _s(RegistrationView, "77CBJm1x9Eq2CvjetLWqBrafkCI=");
 _c = RegistrationView;
 RegistrationView.propTypes = {
-    register: _propTypesDefault.default.shape({
-        username: _propTypesDefault.default.string.isRequired,
-        password: _propTypesDefault.default.string.isRequired,
-        email: _propTypesDefault.default.string.isRequired,
-        dateofbirth: _propTypesDefault.default.string.isRequired
-    }),
-    handleSubmit: _propTypesDefault.default.func.isRequired
+    onLoggedIn: _propTypesDefault.default.func.isRequired
 };
 var _c;
 $RefreshReg$(_c, "RegistrationView");
@@ -37646,6 +37640,7 @@ function LoginView(props) {
                             __self: this,
                             children: [
                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
+                                    id: "title",
                                     __source: {
                                         fileName: "src/components/login-view/login-view.jsx",
                                         lineNumber: 25
@@ -37733,6 +37728,7 @@ function LoginView(props) {
                                         }),
                                         /*#__PURE__*/ _jsxRuntime.jsx("a", {
                                             href: "../registration-view/registration-view",
+                                            id: "link",
                                             __source: {
                                                 fileName: "src/components/login-view/login-view.jsx",
                                                 lineNumber: 52
@@ -37752,6 +37748,9 @@ function LoginView(props) {
 }
 _s(LoginView, "9FY2cPL9VBDmuhjwpF2ik6flsHs=");
 _c = LoginView;
+LoginView.propTypes = {
+    onLoggedIn: _propTypesDefault.default.func.isRequired
+};
 var _c;
 $RefreshReg$(_c, "LoginView");
 

@@ -22,7 +22,7 @@ export function LoginView(props) {
           <CardGroup>
             <Card>
               <Card.Body>
-                <Card.Title>Welcome to the registration page!</Card.Title>
+                <Card.Title id="title">Welcome to the registration page!</Card.Title>
                 <Form>
                   <Form.Group controlId="formUsername">
                     <Form.Label>Username:</Form.Label>
@@ -49,7 +49,7 @@ export function LoginView(props) {
                     onClick={handleSubmit}>
                     Submit
                   </Button>
-                  <a href="../registration-view/registration-view" >Register now!</a>
+                  <a href="../registration-view/registration-view" id="link" >Register now!</a>
                 </Form>
               </Card.Body>
             </Card>
@@ -60,8 +60,9 @@ export function LoginView(props) {
   );
 }
 
-
-
+LoginView.propTypes = {
+  onLoggedIn: PropTypes.func.isRequired
+};
 
 
 
