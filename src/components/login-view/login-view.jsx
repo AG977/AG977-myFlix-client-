@@ -18,9 +18,9 @@ export function LoginView(props) {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col class="login-padding">
           <CardGroup>
-            <Card>
+            <Card class="login">
               <Card.Body>
                 <Card.Title id="title">Welcome to the registration page!</Card.Title>
                 <Form>

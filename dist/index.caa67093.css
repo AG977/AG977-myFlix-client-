@@ -1,6 +1,12 @@
 .my-flix {
   color: #000;
 }
+div.card {
+  min-height: 700px;
+  padding: 10px;
+  border-color: #daa520;
+  background: #000;
+}
 button.btn.btn-primary {
   color: #000;
   background: #daa520;
@@ -16,7 +22,9 @@ div.app-container {
   color: #daa520;
 }
 
-div.card-body {
+.login {
+  min-height: fit-content;
+  padding: 4px;
   border-color: #daa520;
 }
 
@@ -25,8 +33,8 @@ a {
   color: #000;
 }
 
-div.col {
-  padding: 30% 0 45% 0;
+.login-padding {
+  padding: 30% 30% 30% 30%;
 }
 html {
   background: #000;
