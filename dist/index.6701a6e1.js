@@ -23003,6 +23003,8 @@ class MainView extends _reactDefault.default.Component {
                     sm: 6,
                     md: 4,
                     lg: 3,
+                    "flex-fill": true,
+                    "align-items-stretch": true,
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
                         lineNumber: 66

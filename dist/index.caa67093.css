@@ -24,6 +24,10 @@ link,
 a {
   color: #000;
 }
+
+div.col {
+  padding: 30% 0 45% 0;
+}
 html {
   background: #000;
   color: #daa520;
