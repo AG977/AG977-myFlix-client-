@@ -23033,7 +23033,7 @@ exports.default = MainView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../movie-card/movie-card":"6EiBJ","../movie-view/movie-view":"ikZdr","@parcel/transformer-js/src/esmodule-helpers.js":"hPc2C","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"e6WFV","axios":"iYoWk","../registration-view/registration-view":"aP2YV","../login-view/login-view":"054li","react-bootstrap/Row":"c0x1x","react-bootstrap/Col":"fbam0","./main-view.scss":"jyMAr"}],"6EiBJ":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../movie-card/movie-card":"6EiBJ","../movie-view/movie-view":"ikZdr","@parcel/transformer-js/src/esmodule-helpers.js":"hPc2C","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"e6WFV","axios":"iYoWk","../registration-view/registration-view":"aP2YV","../login-view/login-view":"054li","./main-view.scss":"jyMAr","react-bootstrap/Row":"c0x1x","react-bootstrap/Col":"fbam0"}],"6EiBJ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4249 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
