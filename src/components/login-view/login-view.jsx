@@ -22,7 +22,7 @@ export function LoginView(props) {
           <CardGroup>
             <Card className="login">
               <Card.Body>
-                <Card.Title id="title">Welcome to the registration page!</Card.Title>
+                <Card.Title id="title">Please login!</Card.Title>
                 <Form>
                   <Form.Group controlId="formUsername">
                     <Form.Label>Username:</Form.Label>
