@@ -1,5 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './movie-view.scss';
+import Images from '../../../Images/*.png';
+import Image from 'react-bootstrap/Image'
+import { Image, Button, Card } from 'react-bootstrap';
+
 
 export class MovieView extends React.Component {
 
@@ -9,7 +14,7 @@ export class MovieView extends React.Component {
     return (
       <div className="movie-view">
         <div className="movie-poster">
-          <img src={movie.ImagePath} />
+          <Image fluid src={Images[movie.ImagePath]} />
         </div>
         <div className="movie-title">
           <span className="label">Title: </span>

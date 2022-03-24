@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/AG977/AG977-myFlix-client-#readme",
   "dependencies": {
+    "@parcel/config-default": "^2.3.2",
+    "@parcel/resolver-glob": "^2.3.2",
     "axios": "^0.26.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
@@ -25,6 +27,9 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-rc.0"
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.3.2",
+    "parcel": "^2.3.2",
+    "process": "^0.11.10"
   }
 }

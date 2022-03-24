@@ -28,10 +28,14 @@ a {
   padding: 30% 30% 30% 30%;
 }
 div.card {
-  min-height: 700px;
+  min-height: 900px;
   padding: 10px;
   border-color: #daa520;
   background: #000;
+}
+
+.card-height {
+  min-height: 900px;
 }
 html {
   background: #000;
