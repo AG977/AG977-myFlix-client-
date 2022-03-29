@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Form, Button, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
 import './login-view.scss';
@@ -9,20 +10,28 @@ export function LoginView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(username, password);
     /* Send a request to the server for authentication */
-    /* then call props.onLoggedIn(username) */
-    props.onLoggedIn(username);
-  };
+    axios.post('https://myflixchill.herokuapp.com/login', {
+    Username: username,
+    Password: password
+  })
+  .then(response => {
+    const data = response.data;
+    props.onLoggedIn(data);
+  })
+  .catch(e => {
+    console.log('no such user')
+  });
+};
 
   return (
     <Container>
       <Row>
-        <Col className="login-padding">
+        <Col class="login-padding">
           <CardGroup>
-            <Card className="login">
+            <Card class="login">
               <Card.Body>
-                <Card.Title id="title">Please login!</Card.Title>
+                <Card.Title id="title">Login page!</Card.Title>
                 <Form>
                   <Form.Group controlId="formUsername">
                     <Form.Label>Username:</Form.Label>
@@ -63,7 +72,6 @@ export function LoginView(props) {
 LoginView.propTypes = {
   onLoggedIn: PropTypes.func.isRequired
 };
-
 
 
 
