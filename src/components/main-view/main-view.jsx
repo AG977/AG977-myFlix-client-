@@ -31,17 +31,6 @@ class MainView extends React.Component {
     }
   }
  
-  onLoggedIn(authData) {
-    console.log(authData);
-    this.setState({
-      user: authData.user.Username
-    });
-
-    localStorage.setItem('token', authData.token);
-    localStorage.setItem('user', authData.user.Username);
-    this.getMovies(authData.token);
-  }
-
   getMovies(token) {
     axios.get('https://myflixchill.herokuapp.com/movies', {
       headers: { Authorization: `Bearer ${token}`}
@@ -55,6 +44,17 @@ class MainView extends React.Component {
     .catch(function (error) {
       console.log(error);
     });
+  }
+
+  onLoggedIn(authData) {
+    console.log(authData);
+    this.setState({
+      user: authData.user.Username
+    });
+
+    localStorage.setItem('token', authData.token);
+    localStorage.setItem('user', authData.user.Username);
+    this.getMovies(authData.token);
   }
 
   render() {
@@ -79,7 +79,7 @@ class MainView extends React.Component {
       <Router>
         <Row className="main-view justify-content-md-center">
           <Route exact path="/" render={() => {
-             if (!user) return <Col>
+             if (!user) return  <Col>
              <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
             </Col>
             if (movies.length === 0) return <div className="main-view" />;

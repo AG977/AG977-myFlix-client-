@@ -22826,15 +22826,6 @@ class MainView extends _reactDefault.default.Component {
             this.getMovies(accessToken);
         }
     }
-    onLoggedIn(authData) {
-        console.log(authData);
-        this.setState({
-            user: authData.user.Username
-        });
-        localStorage.setItem('token', authData.token);
-        localStorage.setItem('user', authData.user.Username);
-        this.getMovies(authData.token);
-    }
     getMovies(token) {
         _axiosDefault.default.get('https://myflixchill.herokuapp.com/movies', {
             headers: {
@@ -22848,6 +22839,15 @@ class MainView extends _reactDefault.default.Component {
         }).catch(function(error) {
             console.log(error);
         });
+    }
+    onLoggedIn(authData) {
+        console.log(authData);
+        this.setState({
+            user: authData.user.Username
+        });
+        localStorage.setItem('token', authData.token);
+        localStorage.setItem('user', authData.user.Username);
+        this.getMovies(authData.token);
     }
     render() {
         const { movies , user: user1  } = this.state;
@@ -28461,10 +28461,10 @@ function LoginView(props) {
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Container, {
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Row, {
             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Col, {
-                class: "login-padding",
+                className: "login-padding",
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.CardGroup, {
                     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Card, {
-                        class: "login",
+                        className: "login",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Card.Body, {
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Card.Title, {
