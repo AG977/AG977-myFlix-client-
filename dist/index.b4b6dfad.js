@@ -22903,7 +22903,7 @@ class MainView extends _reactDefault.default.Component {
             lineNumber: 76,
             columnNumber: 37
         }, this));
-        return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
+        return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Row, {
                 className: "main-view justify-content-md-center",
                 children: [
@@ -22935,7 +22935,7 @@ class MainView extends _reactDefault.default.Component {
                     }, void 0, false, {
                         fileName: "src/components/main-view/main-view.jsx",
                         lineNumber: 81,
-                        columnNumber: 11
+                        columnNumber: 13
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
                         path: "/register",
@@ -22951,7 +22951,7 @@ class MainView extends _reactDefault.default.Component {
                     }, void 0, false, {
                         fileName: "src/components/main-view/main-view.jsx",
                         lineNumber: 93,
-                        columnNumber: 11
+                        columnNumber: 13
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
                         path: "/movies/:movieId",
@@ -22979,7 +22979,7 @@ class MainView extends _reactDefault.default.Component {
                     }, void 0, false, {
                         fileName: "src/components/main-view/main-view.jsx",
                         lineNumber: 101,
-                        columnNumber: 11
+                        columnNumber: 13
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
                         path: "/directors/:name",
@@ -23004,7 +23004,7 @@ class MainView extends _reactDefault.default.Component {
                     }, void 0, false, {
                         fileName: "src/components/main-view/main-view.jsx",
                         lineNumber: 112,
-                        columnNumber: 11
+                        columnNumber: 13
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
                         path: "/genres/:name",
@@ -23029,13 +23029,13 @@ class MainView extends _reactDefault.default.Component {
                     }, void 0, false, {
                         fileName: "src/components/main-view/main-view.jsx",
                         lineNumber: 122,
-                        columnNumber: 11
+                        columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/main-view/main-view.jsx",
                 lineNumber: 80,
-                columnNumber: 9
+                columnNumber: 11
             }, this)
         }, void 0, false, {
             fileName: "src/components/main-view/main-view.jsx",
