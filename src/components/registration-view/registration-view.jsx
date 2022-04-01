@@ -10,8 +10,42 @@ export function RegistrationView(props) {
   const [ email, setEmail ] = useState('');
   const [ dateofbirth, setDateOfBirth ] = useState('');
 
+  const [ usernameErr, setUsernameErr ] = useState('');
+  const [ passwordErr, setPasswordErr ] = useState('');
+  const [ emailErr, setEmailErr ] = useState('');
+
+   const validate = () => {
+    let isReq = true;
+
+    if(!username){
+        setUsernameErr('Username required');
+        isReq = false;
+    }else if(username.length < 2){
+        setUsernameErr('Username must be at least 2 characters long');
+        isReq = false;
+    }
+    if(!password){
+        setPasswordErr('Password required');
+        isReq = false;
+    }else if(password.length < 6){
+        setPassword('Password must be at least 6 characters long');
+        isReq = false;
+    }
+    if(!email){
+        setEmailErr('Email required');
+        isReq = false;
+    }else if(email.indexOf('@') === -1){
+        setEmail('Email must be valid');
+        isReq = false;
+    }
+
+    return isReq;
+}
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const isReq = validate();
+        if(isReq) {
     axios.post('https://myflixchill.herokuapp.com/users', {
       Username: username,
       Password: password,
@@ -46,6 +80,7 @@ export function RegistrationView(props) {
                       onChange={e => setUsername(e.target.value)} 
                       required 
                     />
+                    {usernameErr && <p>{usernameErr}</p>}
                   </Form.Group>
 
                   <Form.Group>
@@ -58,6 +93,7 @@ export function RegistrationView(props) {
                       required  
                       minLength="8"
                     />
+                    {passwordErr && <p>{passwordErr}</p>}
                   </Form.Group>
 
                   <Form.Group>
@@ -69,6 +105,7 @@ export function RegistrationView(props) {
                       onChange={e => setEmail(e.target.value)} 
                       required
                     /> 
+                    {emailErr && <p>{emailErr}</p>}
                   </Form.Group>
           
                   <Form.Group>

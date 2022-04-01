@@ -8,8 +8,34 @@ export function LoginView(props) {
   const [ username, setUsername ] = useState('');
   const [ password, setPassword ] = useState('');
 
+  const [ usernameErr, setUsernameErr ] = useState('');
+  const [ passwordErr, setPasswordErr ] = useState('');
+
+  const validate = () => {
+    let isReq = true;
+
+    if(!username){
+        setUsernameErr('Username required');
+        isReq = false;
+    }else if(username.length < 2){
+        setUsernameErr('Username must be at least 2 characters long');
+        isReq = false;
+    }
+    if(!password){
+        setPasswordErr('Password required');
+        isReq = false;
+    }else if(password.length < 6){
+        setPassword('Password must be at least 6 characters long');
+        isReq = false;
+    }
+
+    return isReq;
+}
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const isReq = validate();
+    if(isReq) {
     /* Send a request to the server for authentication */
     axios.post('https://myflixchill.herokuapp.com/login', {
     Username: username,
@@ -41,6 +67,7 @@ export function LoginView(props) {
                       required 
                       placeholder="Username"
                     />
+                    {usernameErr && <p>{usernameErr}</p>}
                   </Form.Group>
 
                   <Form.Group controlId="formPassword">
@@ -51,6 +78,7 @@ export function LoginView(props) {
                       required
                       placeholder="Password"
                     />
+                    {passwordErr && <p>{passwordErr}</p>}
                   </Form.Group>
                   <Button 
                     variant="primary" 
@@ -72,9 +100,4 @@ export function LoginView(props) {
 LoginView.propTypes = {
   onLoggedIn: PropTypes.func.isRequired
 };
-
-
-
-
-
 
