@@ -4,8 +4,52 @@ import { Link } from "react-router-dom";
 import './profile-view.scss';
 import axios from 'axios';
 
+export class ProfileView extends React.Component {
+  constructor() {
+      super();
 
+      this.state = {
+          Username: null,
+          Password: null,
+          Email: null,
+          Birthday: null,
+          FavoriteMovies: [],
+      };
+  }
 
+  componentDidMount() {
+      const accessToken = localStorage.getItem('token');
+      this.getUser(accessToken);
+  }
+
+  onLoggedOut() {
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      this.setState({
+          user: null,
+      });
+      window.open('/', '_self');
+  }
+
+  getUser = (token) => {
+    const Username = localStorage.getItem('user');
+    axios
+        .get(`https://orishflix.herokuapp.com/users/${Username}`, {
+            headers: { Authorization: `Bearer ${token}` },
+        })
+        .then((response) => {
+            this.setState({
+                Username: response.data.Username,
+                Password: response.data.Password,
+                Email: response.data.Email,
+                Birthday: response.data.Birthday,
+                FavoriteMovies: response.data.FavoriteMovies,
+            });
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+  
 
 //allow user to add favorite movies
 
@@ -67,5 +111,4 @@ function UpdateUser({handleSubmit, handleUpdate}) {
       </button>
     </form>
   )
-}
-
+}}}
