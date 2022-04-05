@@ -21,6 +21,17 @@ class MainView extends React.Component {
     };
   }
 
+  onLoggedIn(authData) {
+    console.log(authData);
+    this.setState({
+      user: authData.user.Username
+    });
+
+    localStorage.setItem('token', authData.token);
+    localStorage.setItem('user', authData.user.Username);
+    this.getMovies(authData.token);
+  }
+
   componentDidMount() {
     let accessToken = localStorage.getItem('token');
     if (accessToken !== null) {
@@ -45,17 +56,14 @@ class MainView extends React.Component {
       console.log(error);
     });
   }
-
-  onLoggedIn(authData) {
-    console.log(authData);
+ 
+  onLoggedOut() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
     this.setState({
-      user: authData.user.Username
+        user: null
     });
-
-    localStorage.setItem('token', authData.token);
-    localStorage.setItem('user', authData.user.Username);
-    this.getMovies(authData.token);
-  }
+}
 
   render() {
     const { movies, user } = this.state;
