@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './profile-view.scss';
 import { Link } from 'react-router-dom';
 import { Container, Card, Button, Row, Col, Form } from 'react-bootstrap';
+import Images from '../../../Images/*.png';
 
 export class ProfileView extends React.Component {
     constructor() {
@@ -259,7 +260,7 @@ export class ProfileView extends React.Component {
                                                     <Card.Img
                                                         className="fav-poster"
                                                         variant="top"
-                                                        src={movie.ImagePath}
+                                                        src={Images[movie.ImagePath]}
                                                     />
                                                     <Card.Body style={{ backgroundColor: "black" }}>
                                                         <Card.Title className="movie_title">
