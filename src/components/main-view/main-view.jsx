@@ -95,14 +95,14 @@ class MainView extends React.Component {
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
             return movies.map(m => (
-              <Col xs ={12} sm={6} md={4} lg={3} flex-fill align-items-stretch key={m._id}>
+              <Col xs ={12} sm={6} md={4} lg={3} flex-fill="true" align-items-stretch="true" key={m._id}>
                 <MovieCard movie={m} />
               </Col>
             ))
           }} />
 
           <Route path="/register" render={() => {
-            if (user) return <Redirect to="/" />
+            if (!user) return <Redirect to="/" />
             return <Col>
               <RegistrationView />
             </Col>

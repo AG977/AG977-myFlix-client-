@@ -22933,8 +22933,8 @@ class MainView extends _reactDefault.default.Component {
                                     sm: 6,
                                     md: 4,
                                     lg: 3,
-                                    "flex-fill": true,
-                                    "align-items-stretch": true,
+                                    "flex-fill": "true",
+                                    "align-items-stretch": "true",
                                     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_movieCard.MovieCard, {
                                         movie: m
                                     }, void 0, false, void 0, void 0)
@@ -22949,7 +22949,7 @@ class MainView extends _reactDefault.default.Component {
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
                         path: "/register",
                         render: ()=>{
-                            if (user1) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Redirect, {
+                            if (!user1) return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Redirect, {
                                 to: "/"
                             }, void 0, false, void 0, void 0));
                             return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Col, {
@@ -28782,8 +28782,7 @@ MovieCard.propTypes = {
         Title: _propTypesDefault.default.string.isRequired,
         Description: _propTypesDefault.default.string.isRequired,
         ImagePath: _propTypesDefault.default.string.isRequired
-    }).isRequired,
-    onMovieClick: _propTypesDefault.default.func.isRequired
+    }).isRequired
 };
 
   $parcel$ReactRefreshHelpers$67b2.postlude(module);
@@ -31433,7 +31432,7 @@ var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _directorViewScss = require("./director-view.scss");
 class DirectorView extends _reactDefault.default.Component {
     render() {
-        const { director , movie , onBackClick  } = this.props;
+        const { movie , onBackClick  } = this.props;
         return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
             className: "director-view",
             children: [
@@ -31556,11 +31555,11 @@ class DirectorView extends _reactDefault.default.Component {
     }
 }
 DirectorView.propTypes = {
-    director: _propTypesDefault.default.shape({
+    Directors: _propTypesDefault.default.shape({
         Name: _propTypesDefault.default.string.isRequired,
-        Biography: _propTypesDefault.default.string.isRequired,
+        Bio: _propTypesDefault.default.string.isRequired,
         BirthYear: _propTypesDefault.default.string.isRequired,
-        DeathYear: _propTypesDefault.default.object.isRequired
+        DeathYear: _propTypesDefault.default.string.isRequired
     }).isRequired,
     onBackClick: _propTypesDefault.default.func.isRequired
 };
@@ -31661,7 +31660,7 @@ class GenreView extends _reactDefault.default.Component {
         }, this));
     }
 }
-MovieView.propTypes = {
+GenreView.propTypes = {
     genre: _propTypesDefault.default.shape({
         Name: _propTypesDefault.default.string.isRequired,
         Description: _propTypesDefault.default.string.isRequired
