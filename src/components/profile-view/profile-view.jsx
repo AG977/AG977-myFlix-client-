@@ -285,20 +285,10 @@ export class ProfileView extends React.Component {
 }
 
 ProfileView.propTypes = {
-  movies: PropTypes.arrayOf(PropTypes.shape({
-      Title: PropTypes.string.isRequired,
-      Description: PropTypes.string.isRequired,
-      ImagePath: PropTypes.string.isRequired,
-      Genre: PropTypes.shape({
-          Name: PropTypes.string.isRequired,
-          Description: PropTypes.string.isRequired,
-      }).isRequired,
-      Director: PropTypes.shape({
-          Bio: PropTypes.string.isRequired,
-          Birth: PropTypes.string.isRequired,
-          Death: PropTypes.string.isRequired,
-          Name: PropTypes.string.isRequired,
-      }).isRequired,
-  })).isRequired,
-  onBackClick: PropTypes.func.isRequired
+  movie: PropTypes.shape({
+    Title: PropTypes.string.isRequired,
+    ImagePath: PropTypes.string.isRequired,
+}).isRequired,
+onBackClick: PropTypes.func.isRequired
 };
+
