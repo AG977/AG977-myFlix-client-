@@ -8,7 +8,7 @@ import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
-
+import { ProfileView } from '../profile-view/profile-view';
 
 import { Col, Row } from 'react-bootstrap';
 import './main-view.scss';
@@ -137,6 +137,15 @@ class MainView extends React.Component {
             if (movies.length === 0) return <div className="main-view" />;
             return <Col md={8}>
               <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()}/>
+            </Col>
+          }} />
+
+          <Route path="/profile" render={({ match, history }) => {
+            if (!user) return <Col>
+              <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
+            </Col>
+            return <Col md={8}>
+              <ProfileView movies={movies} onBackClick={()=> {}}/>
             </Col>
           }} />
         </Row>
