@@ -1,8 +1,7 @@
 import React from 'react';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
 import './navbar-view.scss';
+
 
 export function NavbarView({user}) {
     const onLoggedOut = () => {
@@ -22,9 +21,9 @@ export function NavbarView({user}) {
     };
 
     return (
-        <Navbar className="main-nav" sticky="top" expand="lg" variant="dark">
+        <Navbar className="main-nav" sticky="top" bg="Dark" expand="lg" variant="dark">
             <Container fluid>
-                <Navbar.Brand className="navbar-logo" href="/">Orishflix</Navbar.Brand>
+                <Navbar.Brand className="navbar-logo" href="/">My Flix Chill</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">

@@ -9,8 +9,9 @@ import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
+import { NavbarView } from '../navbar-view/navbar-view';
 
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Container } from 'react-bootstrap';
 import './main-view.scss';
 
 
@@ -88,6 +89,8 @@ class MainView extends React.Component {
 
     return (
       <Router>
+        <NavbarView user={user}/>
+        <Container>
         <Row className="main-view justify-content-md-center">
           <Route exact path="/" render={() => {
             if (!user) return  <Col>
@@ -102,8 +105,8 @@ class MainView extends React.Component {
           }} />
 
           <Route path="/register" render={() => {
-            if (!user) return <Redirect to="/" />
-            return <Col>
+            if (user) return <Redirect to="/" />
+            return <Col lg={8} md={8}>
               <RegistrationView />
             </Col>
           }} />
@@ -148,7 +151,16 @@ class MainView extends React.Component {
               <ProfileView movies={movies} onBackClick={()=> {}}/>
             </Col>
           }} />
+
+          <Route path="{user}" render={({ match, history }) => {
+            if (!user) return <Redirect to="/" />
+            return <Col md={8}>
+              <ProfileView movies={movies} user={user} onBackClick={()=> {}}/>
+            </Col>
+          }} />
+
         </Row>
+        </Container>
       </Router>
     );
   }
