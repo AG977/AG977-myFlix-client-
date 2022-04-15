@@ -56,8 +56,12 @@ a {
 .login-padding {
   padding: 30% 30% 30% 30%;
 }
+
+div.login-padding.col {
+  padding: 30% 30% 30% 30%;
+}
 div.card {
-  min-height: 900px;
+  min-height: 750px;
   padding: 10px;
   border-color: #daa520;
   background: #000;
@@ -83,6 +87,11 @@ img.img-fluid {
 html {
   background: #000;
   color: #daa520;
+}
+
+nav.main-nav.navbar.navbar-expand-lg.navbar-dark.bg-Dark.sticky-top {
+  padding: 5%;
+  position: static;
 }
 
 div.update-profile.card {
