@@ -43,7 +43,7 @@ export class ProfileView extends React.Component {
                     Username: response.data.Username,
                     Password: response.data.Password,
                     Email: response.data.Email,
-                    Birthday: response.data.Birthday,
+                    Birthday: response.data.DateOfBirth,
                     FavoriteMovies: response.data.FavoriteMovies,
                 });
             })
@@ -64,7 +64,7 @@ export class ProfileView extends React.Component {
                     Username: this.state.Username,
                     Password: this.state.Password,
                     Email: this.state.Email,
-                    Birthday: this.state.Birthday,
+                    Birthday: this.state.DateOfBirth,
                 },
                 {
                     headers: { Authorization: `Bearer ${token}` },
