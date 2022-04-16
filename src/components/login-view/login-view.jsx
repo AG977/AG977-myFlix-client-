@@ -86,8 +86,10 @@ export function LoginView(props) {
                     onClick={handleSubmit}>
                     Submit
                   </Button>
-                  <a href="../registration-view/registration-view" id="link" >Register now!</a>
+                  <button  href="../registration-view/registration-view" id="link" >Register now!</button>
                 </Form>
+                
+
               </Card.Body>
             </Card>
           </CardGroup>

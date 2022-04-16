@@ -32310,7 +32310,7 @@ function LoginView(props) {
                                             lineNumber: 83,
                                             columnNumber: 19
                                         }, this),
-                                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
                                             href: "../registration-view/registration-view",
                                             id: "link",
                                             children: "Register now!"
@@ -35346,7 +35346,7 @@ class ProfileView extends _reactDefault.default.Component {
                 Username: response.data.Username,
                 Password: response.data.Password,
                 Email: response.data.Email,
-                Birthday: response.data.Birthday,
+                Birthday: response.data.DateOfBirth,
                 FavoriteMovies: response.data.FavoriteMovies
             });
         }).catch(function(error) {
@@ -35362,7 +35362,7 @@ class ProfileView extends _reactDefault.default.Component {
             Username: this.state.Username,
             Password: this.state.Password,
             Email: this.state.Email,
-            Birthday: this.state.Birthday
+            Birthday: this.state.DateOfBirth
         }, {
             headers: {
                 Authorization: `Bearer ${token}`
