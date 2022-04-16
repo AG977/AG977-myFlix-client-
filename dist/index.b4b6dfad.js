@@ -32174,6 +32174,7 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _reactBootstrap = require("react-bootstrap");
+var _reactRouterDom = require("react-router-dom");
 var _loginViewScss = require("./login-view.scss");
 var _s = $RefreshSig$();
 function LoginView(props) {
@@ -32227,7 +32228,7 @@ function LoginView(props) {
                                     children: "Login page!"
                                 }, void 0, false, {
                                     fileName: "src/components/login-view/login-view.jsx",
-                                    lineNumber: 60,
+                                    lineNumber: 61,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form, {
@@ -32239,7 +32240,7 @@ function LoginView(props) {
                                                     children: "Username:"
                                                 }, void 0, false, {
                                                     fileName: "src/components/login-view/login-view.jsx",
-                                                    lineNumber: 63,
+                                                    lineNumber: 64,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
@@ -32250,20 +32251,20 @@ function LoginView(props) {
                                                     placeholder: "Username"
                                                 }, void 0, false, {
                                                     fileName: "src/components/login-view/login-view.jsx",
-                                                    lineNumber: 64,
+                                                    lineNumber: 65,
                                                     columnNumber: 21
                                                 }, this),
                                                 usernameErr && /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                     children: usernameErr
                                                 }, void 0, false, {
                                                     fileName: "src/components/login-view/login-view.jsx",
-                                                    lineNumber: 70,
+                                                    lineNumber: 71,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/login-view/login-view.jsx",
-                                            lineNumber: 62,
+                                            lineNumber: 63,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Group, {
@@ -32273,7 +32274,7 @@ function LoginView(props) {
                                                     children: "Password:"
                                                 }, void 0, false, {
                                                     fileName: "src/components/login-view/login-view.jsx",
-                                                    lineNumber: 74,
+                                                    lineNumber: 75,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
@@ -32284,20 +32285,20 @@ function LoginView(props) {
                                                     placeholder: "Password"
                                                 }, void 0, false, {
                                                     fileName: "src/components/login-view/login-view.jsx",
-                                                    lineNumber: 75,
+                                                    lineNumber: 76,
                                                     columnNumber: 21
                                                 }, this),
                                                 passwordErr && /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                                                     children: passwordErr
                                                 }, void 0, false, {
                                                     fileName: "src/components/login-view/login-view.jsx",
-                                                    lineNumber: 81,
+                                                    lineNumber: 82,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/login-view/login-view.jsx",
-                                            lineNumber: 73,
+                                            lineNumber: 74,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Button, {
@@ -32307,53 +32308,53 @@ function LoginView(props) {
                                             children: "Submit"
                                         }, void 0, false, {
                                             fileName: "src/components/login-view/login-view.jsx",
-                                            lineNumber: 83,
+                                            lineNumber: 84,
                                             columnNumber: 19
                                         }, this),
-                                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
                                             href: "../registration-view/registration-view",
                                             id: "link",
                                             children: "Register now!"
                                         }, void 0, false, {
                                             fileName: "src/components/login-view/login-view.jsx",
-                                            lineNumber: 89,
+                                            lineNumber: 90,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/login-view/login-view.jsx",
-                                    lineNumber: 61,
+                                    lineNumber: 62,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 59,
+                            lineNumber: 60,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 58,
+                        lineNumber: 59,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 57,
+                    lineNumber: 58,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/login-view/login-view.jsx",
-                lineNumber: 56,
+                lineNumber: 57,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "src/components/login-view/login-view.jsx",
-            lineNumber: 55,
+            lineNumber: 56,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/login-view/login-view.jsx",
-        lineNumber: 54,
+        lineNumber: 55,
         columnNumber: 5
     }, this));
 }
@@ -32370,191 +32371,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap":"3AD9A","./login-view.scss":"e57ax","axios":"jo6P5"}],"e57ax":[function() {},{}],"bwuIu":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$67b2.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MovieCard", ()=>MovieCard
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _button = require("react-bootstrap/Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _card = require("react-bootstrap/Card");
-var _cardDefault = parcelHelpers.interopDefault(_card);
-var _movieCardScss = require("./movie-card.scss");
-var _png = require("../../../Images/*.png");
-var _pngDefault = parcelHelpers.interopDefault(_png);
-var _reactRouterDom = require("react-router-dom");
-class MovieCard extends _reactDefault.default.Component {
-    render() {
-        const { movie  } = this.props;
-        return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardDefault.default, {
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardDefault.default.Img, {
-                    variant: "top",
-                    src: _pngDefault.default[movie.ImagePath]
-                }, void 0, false, {
-                    fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 16,
-                    columnNumber: 8
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardDefault.default.Body, {
-                    children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardDefault.default.Title, {
-                            children: movie.Title
-                        }, void 0, false, {
-                            fileName: "src/components/movie-card/movie-card.jsx",
-                            lineNumber: 18,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardDefault.default.Text, {
-                            children: movie.Description
-                        }, void 0, false, {
-                            fileName: "src/components/movie-card/movie-card.jsx",
-                            lineNumber: 19,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            to: `/movies/${movie._id}`,
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_buttonDefault.default, {
-                                variant: "link",
-                                children: "Open"
-                            }, void 0, false, {
-                                fileName: "src/components/movie-card/movie-card.jsx",
-                                lineNumber: 21,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/components/movie-card/movie-card.jsx",
-                            lineNumber: 20,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 17,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/movie-card/movie-card.jsx",
-            lineNumber: 15,
-            columnNumber: 7
-        }, this));
-    }
-}
-MovieCard.propTypes = {
-    movie: _propTypesDefault.default.shape({
-        Title: _propTypesDefault.default.string.isRequired,
-        Description: _propTypesDefault.default.string.isRequired,
-        ImagePath: _propTypesDefault.default.string.isRequired
-    }).isRequired
-};
-
-  $parcel$ReactRefreshHelpers$67b2.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Button":"aPzUt","react-bootstrap/Card":"lAynp","./movie-card.scss":"d6HH4","../../../Images/*.png":"8S5Ch","react-router-dom":"cHIiW"}],"d6HH4":[function() {},{}],"8S5Ch":[function(require,module,exports) {
-const _temp0 = require("./Home-alone.png");
-const _temp1 = require("./Kung-fu-panda-two.png");
-const _temp2 = require("./Kung-fu-panda.png");
-const _temp3 = require("./Lord-of-the-rings.png");
-const _temp4 = require("./Madagascar-one.png");
-const _temp5 = require("./Madagascar-two.png");
-const _temp6 = require("./Pirates-of-the-caribbean.png");
-const _temp7 = require("./Shrek-one.png");
-const _temp8 = require("./Shrek-two.png");
-const _temp9 = require("./The-lion-king.png");
-module.exports = {
-    "Home-alone": _temp0,
-    "Kung-fu-panda-two": _temp1,
-    "Kung-fu-panda": _temp2,
-    "Lord-of-the-rings": _temp3,
-    "Madagascar-one": _temp4,
-    "Madagascar-two": _temp5,
-    "Pirates-of-the-caribbean": _temp6,
-    "Shrek-one": _temp7,
-    "Shrek-two": _temp8,
-    "The-lion-king": _temp9
-};
-
-},{"./Home-alone.png":"HVNne","./Kung-fu-panda-two.png":"fnORC","./Kung-fu-panda.png":"cGeOd","./Lord-of-the-rings.png":"b6Hhg","./Madagascar-one.png":"lB84a","./Madagascar-two.png":"jh1lJ","./Pirates-of-the-caribbean.png":"eBfq3","./Shrek-one.png":"jWlO4","./Shrek-two.png":"fI80w","./The-lion-king.png":"97iBh"}],"HVNne":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Home-alone.d5cf3763.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {
-};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"fnORC":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Kung-fu-panda-two.a3d59571.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"cGeOd":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Kung-fu-panda.5988361b.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"b6Hhg":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Lord-of-the-rings.81954250.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"lB84a":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Madagascar-one.9627e625.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"jh1lJ":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Madagascar-two.6a6b85af.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"eBfq3":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Pirates-of-the-caribbean.087eb802.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"jWlO4":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Shrek-one.0ecb2834.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"fI80w":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Shrek-two.56b8dfe8.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"97iBh":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "The-lion-king.97bce096.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"cHIiW":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap":"3AD9A","./login-view.scss":"e57ax","axios":"jo6P5","react-router-dom":"cHIiW"}],"e57ax":[function() {},{}],"cHIiW":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>_reactRouter.MemoryRouter
@@ -34849,7 +34666,191 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 }
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"7EuwB"}],"ggaUx":[function(require,module,exports) {
+},{"react-is":"7EuwB"}],"bwuIu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$67b2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MovieCard", ()=>MovieCard
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _card = require("react-bootstrap/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _movieCardScss = require("./movie-card.scss");
+var _png = require("../../../Images/*.png");
+var _pngDefault = parcelHelpers.interopDefault(_png);
+var _reactRouterDom = require("react-router-dom");
+class MovieCard extends _reactDefault.default.Component {
+    render() {
+        const { movie  } = this.props;
+        return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardDefault.default, {
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardDefault.default.Img, {
+                    variant: "top",
+                    src: _pngDefault.default[movie.ImagePath]
+                }, void 0, false, {
+                    fileName: "src/components/movie-card/movie-card.jsx",
+                    lineNumber: 16,
+                    columnNumber: 8
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardDefault.default.Body, {
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardDefault.default.Title, {
+                            children: movie.Title
+                        }, void 0, false, {
+                            fileName: "src/components/movie-card/movie-card.jsx",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardDefault.default.Text, {
+                            children: movie.Description
+                        }, void 0, false, {
+                            fileName: "src/components/movie-card/movie-card.jsx",
+                            lineNumber: 19,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                            to: `/movies/${movie._id}`,
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_buttonDefault.default, {
+                                variant: "link",
+                                children: "Open"
+                            }, void 0, false, {
+                                fileName: "src/components/movie-card/movie-card.jsx",
+                                lineNumber: 21,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/components/movie-card/movie-card.jsx",
+                            lineNumber: 20,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/movie-card/movie-card.jsx",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/movie-card/movie-card.jsx",
+            lineNumber: 15,
+            columnNumber: 7
+        }, this));
+    }
+}
+MovieCard.propTypes = {
+    movie: _propTypesDefault.default.shape({
+        Title: _propTypesDefault.default.string.isRequired,
+        Description: _propTypesDefault.default.string.isRequired,
+        ImagePath: _propTypesDefault.default.string.isRequired
+    }).isRequired
+};
+
+  $parcel$ReactRefreshHelpers$67b2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Button":"aPzUt","react-bootstrap/Card":"lAynp","./movie-card.scss":"d6HH4","../../../Images/*.png":"8S5Ch","react-router-dom":"cHIiW"}],"d6HH4":[function() {},{}],"8S5Ch":[function(require,module,exports) {
+const _temp0 = require("./Home-alone.png");
+const _temp1 = require("./Kung-fu-panda-two.png");
+const _temp2 = require("./Kung-fu-panda.png");
+const _temp3 = require("./Lord-of-the-rings.png");
+const _temp4 = require("./Madagascar-one.png");
+const _temp5 = require("./Madagascar-two.png");
+const _temp6 = require("./Pirates-of-the-caribbean.png");
+const _temp7 = require("./Shrek-one.png");
+const _temp8 = require("./Shrek-two.png");
+const _temp9 = require("./The-lion-king.png");
+module.exports = {
+    "Home-alone": _temp0,
+    "Kung-fu-panda-two": _temp1,
+    "Kung-fu-panda": _temp2,
+    "Lord-of-the-rings": _temp3,
+    "Madagascar-one": _temp4,
+    "Madagascar-two": _temp5,
+    "Pirates-of-the-caribbean": _temp6,
+    "Shrek-one": _temp7,
+    "Shrek-two": _temp8,
+    "The-lion-king": _temp9
+};
+
+},{"./Home-alone.png":"HVNne","./Kung-fu-panda-two.png":"fnORC","./Kung-fu-panda.png":"cGeOd","./Lord-of-the-rings.png":"b6Hhg","./Madagascar-one.png":"lB84a","./Madagascar-two.png":"jh1lJ","./Pirates-of-the-caribbean.png":"eBfq3","./Shrek-one.png":"jWlO4","./Shrek-two.png":"fI80w","./The-lion-king.png":"97iBh"}],"HVNne":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Home-alone.d5cf3763.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {
+};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"fnORC":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Kung-fu-panda-two.a3d59571.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"cGeOd":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Kung-fu-panda.5988361b.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"b6Hhg":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Lord-of-the-rings.81954250.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lB84a":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Madagascar-one.9627e625.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"jh1lJ":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Madagascar-two.6a6b85af.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"eBfq3":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Pirates-of-the-caribbean.087eb802.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"jWlO4":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Shrek-one.0ecb2834.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"fI80w":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "Shrek-two.56b8dfe8.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"97iBh":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "The-lion-king.97bce096.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"ggaUx":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e9f6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

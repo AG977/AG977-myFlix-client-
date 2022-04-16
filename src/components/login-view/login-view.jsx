@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Form, Button, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './login-view.scss';
 
 export function LoginView(props) {
@@ -86,10 +87,8 @@ export function LoginView(props) {
                     onClick={handleSubmit}>
                     Submit
                   </Button>
-                  <button  href="../registration-view/registration-view" id="link" >Register now!</button>
+                  <a href="../registration-view/registration-view" id="link">Register now!</a>
                 </Form>
-                
-
               </Card.Body>
             </Card>
           </CardGroup>
