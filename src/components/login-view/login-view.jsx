@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Form, Button, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './login-view.scss';
+import { RegistrationView } from '../registration-view/registration-view';
 
 export function LoginView(props) {
   const [ username, setUsername ] = useState('');
@@ -87,7 +88,7 @@ export function LoginView(props) {
                     onClick={handleSubmit}>
                     Submit
                   </Button>
-                  <a href="../registration-view/registration-view" id="link">Register now!</a>
+                  <Link to ="/register">Register now!</Link>
                 </Form>
               </Card.Body>
             </Card>
