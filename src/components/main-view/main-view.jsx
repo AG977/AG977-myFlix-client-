@@ -71,22 +71,6 @@ class MainView extends React.Component {
 
   render() {
     const { movies, user } = this.state;
-    
-    if (!user) return <Row>
-      <Col>
-       <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
-      </Col>
-    </Row>
-
-    if (!user) return <Row> 
-      <Col>
-        <RegistrationView onLoggedIn={user => this.onLoggedIn(user)} />;
-      </Col>
-    </Row>
-
-    // Before the movies have been loaded
-    if (movies.length === 0) return <div className="main-view" />;
-
     return (
       <Router>
         <NavbarView user={user}/>
