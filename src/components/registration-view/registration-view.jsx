@@ -13,7 +13,7 @@ export function RegistrationView(props) {
   const [ usernameErr, setUsernameErr ] = useState('');
   const [ passwordErr, setPasswordErr ] = useState('');
   const [ emailErr, setEmailErr ] = useState('');
-
+ 
    const validate = () => {
     let isReq = true;
 
@@ -50,7 +50,7 @@ export function RegistrationView(props) {
       Username: username,
       Password: password,
       Email: email,
-      Birthday: birthday
+      Birthday: dateofbirth
     })
     .then(response => {
       const data = response.data;
@@ -136,6 +136,14 @@ export function RegistrationView(props) {
 }
 
 RegistrationView.propTypes = {
-  onLoggedIn: PropTypes.func.isRequired
-};
+  validate: PropTypes.shape({
+      Username: PropTypes.string.isRequired,
+      password: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      dateofbirth: PropTypes.object.isRequired
+    }),
+    onRegistration: PropTypes.func,
+  };
+  
+
 
