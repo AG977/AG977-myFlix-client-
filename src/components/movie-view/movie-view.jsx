@@ -4,7 +4,6 @@ import './movie-view.scss';
 import Images from '../../../Images/*.png';
 import { Image, Button } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import { DierctorView } from '../director-view/director-view';
 
 export class MovieView extends React.Component {
 
