@@ -34694,9 +34694,11 @@ class MovieCard extends _reactDefault.default.Component {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_buttonDefault.default, {
+                            size: "sm",
                             variant: "success",
-                            type: "submit",
-                            onClick: this.addFavoriteMovies,
+                            value: movie._id,
+                            onClick: (e)=>this.addFavoriteMovies(e, movie)
+                            ,
                             children: "Add to Favorites"
                         }, void 0, false, {
                             fileName: "src/components/movie-card/movie-card.jsx",
