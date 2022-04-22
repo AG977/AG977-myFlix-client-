@@ -44,7 +44,7 @@ export function RegistrationView(props) {
 }
 
   const handleSubmit = (e) => {
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     e.preventDefault();
     const isReq = validate();
         if(isReq) {
@@ -55,12 +55,12 @@ export function RegistrationView(props) {
       Birthday: dateofbirth
     })
     .then(response => {
-      //const data = response.data;
+      const data = response.data;
       //console.log(data);
       //window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
-      const data = () => {
-        navigate("/login");
-    }
+      //const data = () => {
+        //navigate("/login");
+    //}
     })
     .catch(e => {
       console.log('error registering the user')

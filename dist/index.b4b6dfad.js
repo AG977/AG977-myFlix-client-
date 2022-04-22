@@ -24658,7 +24658,6 @@ var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 function RegistrationView(props) {
     _s();
-    var _s1 = $RefreshSig$();
     const [username, setUsername] = _react.useState('');
     const [password, setPassword] = _react.useState('');
     const [email, setEmail] = _react.useState('');
@@ -24692,8 +24691,7 @@ function RegistrationView(props) {
         return isReq;
     };
     const handleSubmit = (e)=>{
-        _s1();
-        const navigate = _reactRouterDom.useNavigate();
+        //const navigate = useNavigate();
         e.preventDefault();
         const isReq = validate();
         if (isReq) _axiosDefault.default.post('https://myflixchill.herokuapp.com/users', {
@@ -24702,21 +24700,16 @@ function RegistrationView(props) {
             Email: email,
             Birthday: dateofbirth
         }).then((response)=>{
-            //const data = response.data;
-            //console.log(data);
-            //window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
-            const data = ()=>{
-                navigate("/login");
-            };
+            const data = response.data;
+        //console.log(data);
+        //window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
+        //const data = () => {
+        //navigate("/login");
+        //}
         }).catch((e)=>{
             console.log('error registering the user');
         });
     };
-    _s1(handleSubmit, "CzcTeTziyjMsSrAVmHuCCb6+Bfg=", false, function() {
-        return [
-            _reactRouterDom.useNavigate
-        ];
-    });
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Container, {
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Row, {
             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Col, {
