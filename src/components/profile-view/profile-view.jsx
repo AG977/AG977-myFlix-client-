@@ -51,6 +51,8 @@ export class ProfileView extends React.Component {
                 console.log(error);
             });
     };
+
+    
     // Allow user to edit or update profile
     editUser = (e) => {
         e.preventDefault();
@@ -109,6 +111,31 @@ export class ProfileView extends React.Component {
                 console.log(error);
             });
     };
+
+    //allow user to add favorite movies
+
+    addFavoriteMovies = (e, movie) => {
+      e.preventDefault();
+      const Username = localStorage.getItem('user');
+      const token = localStorage.getItem('token');
+
+      axios
+          .post(
+              `https://myflixchill.herokuapp.com/users/${Username}/movies/${movie._id}`,
+              {
+                  headers: { Authorization: `Bearer ${token}` },
+              }
+          )
+          .then((response) => {
+              console.log(response);
+              alert("Movie added!");
+              this.componentDidMount();
+          })
+          .catch(function (error) {
+              console.log(error);
+          });
+  };
+
 
     // Deregister
     onDeleteUser() {
@@ -259,7 +286,7 @@ export class ProfileView extends React.Component {
                                                     <Card.Img
                                                         className="fav-poster"
                                                         variant="top"
-                                                        src={Images[movie.ImagePath]}
+                                                        src={Images[movie.ImagePath]} 
                                                     />
                                                     <Card.Body style={{ backgroundColor: "black" }}>
                                                         <Card.Title className="movie_title">
@@ -291,4 +318,6 @@ ProfileView.propTypes = {
 }).isRequired,
 onBackClick: PropTypes.func.isRequired
 };
+
+
 

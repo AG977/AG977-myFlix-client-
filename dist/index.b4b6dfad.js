@@ -35296,7 +35296,7 @@ class ProfileView extends _reactDefault.default.Component {
             Password: null,
             Email: null,
             Birthday: null,
-            favoriteMovies: []
+            FavoriteMovies: []
         };
     }
     componentDidMount() {
