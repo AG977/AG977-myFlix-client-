@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Form, Button, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
 import './registration-view.scss';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 export function RegistrationView(props) {
   const [ username, setUsername ] = useState('');
@@ -43,6 +44,7 @@ export function RegistrationView(props) {
 }
 
   const handleSubmit = (e) => {
+    const navigate = useNavigate();
     e.preventDefault();
     const isReq = validate();
         if(isReq) {
@@ -53,9 +55,12 @@ export function RegistrationView(props) {
       Birthday: dateofbirth
     })
     .then(response => {
-      const data = response.data;
-      console.log(data);
-      window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
+      //const data = response.data;
+      //console.log(data);
+      //window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
+      const data = () => {
+        navigate("/login");
+    }
     })
     .catch(e => {
       console.log('error registering the user')
