@@ -5,6 +5,26 @@ div.update-profile.card{
   background: #000;
 }
 
+
+div.card,
+div.favorite-movie.card-content.card {
+  min-height: 350px;
+  min-width: 172px;
+  padding: 10px;
+  border-color: #daa520;
+  background: #000;
+}
+
+img.card-img-top.fav-poster,
+div.favorite-movie.card-content.card  {
+  padding: 10px;
+  border-color: #daa520;
+  background: #000;
+  height: 220px;
+  width: 150px;
+  display: block;
+}
+
 div.col{
-  padding: 10%;
+  padding: 50px;
 }
