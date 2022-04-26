@@ -129,7 +129,7 @@ class MainView extends React.Component {
             </Col>
           }} />
 
-
+    
           <Route path="/directors/:name" render={({ match, history }) => {
             if (!user) return <Col>
               <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
@@ -161,7 +161,7 @@ class MainView extends React.Component {
 
           <Route path="{user}" render={({ match, history }) => {
             if (!user) return <Redirect to="/" />
-            return <Col md={8}>
+            return <Col xs ={12} sm={8} md={8} lg={8}>
               <ProfileView movies={movies} user={user} onBackClick={()=> {}}/>
             </Col>
           }} />
