@@ -69,6 +69,29 @@ class MainView extends React.Component {
     });
 }
 
+    //allow user to add favorite movies
+
+    addFavoriteMovies = (e, movie) => {
+      const username = localStorage.getItem('user');
+      const token = localStorage.getItem('token');
+      console.log(username, token)
+
+      axios
+          .post(
+              `https://myflixchill.herokuapp.com/users/${username}/movies/${movie._id}`,
+              {
+                  headers: { Authorization: `Bearer ${token}` },
+              }
+          )
+          .then((response) => {
+              console.log(response);
+              alert("Movie added!");
+          })
+          .catch(function (error) {
+              console.log(error);
+          });
+  };
+
   render() {
     const { movies, user } = this.state;
     return (
@@ -83,7 +106,7 @@ class MainView extends React.Component {
             if (movies.length === 0) return <div className="main-view" />;
             return movies.map(m => (
               <Col xs ={12} sm={6} md={4} lg={3} flex-fill="true" align-items-stretch="true" key={m._id}>
-                <MovieCard movie={m} />
+                <MovieCard movie={m} addFavoriteMovies = {this.addFavoriteMovies} />
               </Col>
             ))
           }} />

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export class MovieCard extends React.Component {
   render() {
-    const { movie } = this.props;
+    const { movie, addFavoriteMovies } = this.props;
 
     return (
       <Card>
@@ -20,7 +20,7 @@ export class MovieCard extends React.Component {
           <Link to={`/movies/${movie._id}`}>
             <Button variant="link">Open</Button>
           </Link>
-            <Button size="sm" variant="success" value={movie._id} onClick={(e) => this.addFavoriteMovies(e, movie)}>Add to Favorites</Button>
+            <Button size="sm" variant="success" value={movie._id} onClick={(e) => addFavoriteMovies(e, movie)}>Add to Favorites</Button>
         </Card.Body>
       </Card>
     );

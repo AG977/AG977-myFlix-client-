@@ -112,31 +112,6 @@ export class ProfileView extends React.Component {
             });
     };
 
-    //allow user to add favorite movies
-
-    addFavoriteMovies = (e, movie) => {
-      e.preventDefault();
-      const Username = localStorage.getItem('user');
-      const token = localStorage.getItem('token');
-
-      axios
-          .post(
-              `https://myflixchill.herokuapp.com/users/${Username}/movies/${movie._id}`,
-              {
-                  headers: { Authorization: `Bearer ${token}` },
-              }
-          )
-          .then((response) => {
-              console.log(response);
-              alert("Movie added!");
-              this.componentDidMount();
-          })
-          .catch(function (error) {
-              console.log(error);
-          });
-  };
-
-
     // Deregister
     onDeleteUser() {
         const Username = localStorage.getItem('user');
