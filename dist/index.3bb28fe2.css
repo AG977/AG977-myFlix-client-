@@ -61,7 +61,7 @@ div.login-padding.col {
   padding: 30% 30% 30% 30%;
 }
 div.card {
-  min-height: 750px;
+  min-height: 850px;
   padding: 10px;
   border-color: #daa520;
   background: #000;
@@ -101,9 +101,8 @@ div.update-profile.card {
   background: #000;
 }
 
-div.card,
 div.favorite-movie.card-content.card {
-  min-height: 350px;
+  min-height: 420px;
   min-width: 172px;
   padding: 10px;
   border-color: #daa520;
