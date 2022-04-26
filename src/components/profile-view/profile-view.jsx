@@ -278,8 +278,8 @@ export class ProfileView extends React.Component {
                         </Card.Body>
                     </Col>
                 </Row>
-                <div className="backButton">
-                    <button variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</button>
+                <div>
+                    <Link to ="/">Back!</Link>
                 </div>
                 <br/>
             </Container>
