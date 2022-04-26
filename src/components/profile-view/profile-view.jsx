@@ -14,7 +14,7 @@ export class ProfileView extends React.Component {
             Username: null,
             Password: null,
             Email: null,
-            Birthday: null,
+            DateOfBirth: null,
             FavoriteMovies: [],
         };
     }
@@ -44,7 +44,7 @@ export class ProfileView extends React.Component {
                     Username: response.data.Username,
                     Password: response.data.Password,
                     Email: response.data.Email,
-                    Birthday: response.data.DateOfBirth,
+                    DateOfBirth: response.data.DateOfBirth,
                     FavoriteMovies: response.data.FavoriteMovies,
                 });
             })
@@ -159,7 +159,7 @@ export class ProfileView extends React.Component {
     }
 
     render() {
-        const { movies, onBackClick } = this.props;
+        const { movies } = this.props;
         const { FavoriteMovies, Username, Email, Birthday } = this.state;
 
         if (!Username) {
@@ -292,9 +292,9 @@ movies: PropTypes.arrayOf(PropTypes.shape({
     Title: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired,
     ImagePath: PropTypes.string.isRequired,
-})).isRequired,
-onBackClick: PropTypes.func.isRequired
-};
+})).isRequired
+}
+
 
 
 

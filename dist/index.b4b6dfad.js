@@ -35311,7 +35311,7 @@ class ProfileView extends _reactDefault.default.Component {
             Username: null,
             Password: null,
             Email: null,
-            Birthday: null,
+            DateOfBirth: null,
             FavoriteMovies: []
         };
     }
@@ -35338,7 +35338,7 @@ class ProfileView extends _reactDefault.default.Component {
                 Username: response.data.Username,
                 Password: response.data.Password,
                 Email: response.data.Email,
-                Birthday: response.data.DateOfBirth,
+                DateOfBirth: response.data.DateOfBirth,
                 FavoriteMovies: response.data.FavoriteMovies
             });
         }).catch(function(error) {
@@ -35429,7 +35429,7 @@ class ProfileView extends _reactDefault.default.Component {
         });
     }
     render() {
-        const { movies , onBackClick  } = this.props;
+        const { movies  } = this.props;
         const { FavoriteMovies , Username , Email , Birthday  } = this.state;
         if (!Username) return null;
         return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Container, {
@@ -35765,8 +35765,7 @@ ProfileView.propTypes = {
         Title: _propTypesDefault.default.string.isRequired,
         Description: _propTypesDefault.default.string.isRequired,
         ImagePath: _propTypesDefault.default.string.isRequired
-    })).isRequired,
-    onBackClick: _propTypesDefault.default.func.isRequired
+    })).isRequired
 };
 
   $parcel$ReactRefreshHelpers$3c12.postlude(module);
