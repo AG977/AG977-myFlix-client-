@@ -78,7 +78,7 @@ class MainView extends React.Component {
 
       axios
           .post(
-              `https://myflixchill.herokuapp.com/users/${username}/movies/${movie._id}`,
+              `https://myflixchill.herokuapp.com/users/${username}/movies/${movie._id}`, {},
               {
                   headers: { Authorization: `Bearer ${token}` },
               }

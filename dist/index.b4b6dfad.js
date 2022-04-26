@@ -22866,6 +22866,7 @@ class MainView extends _reactDefault.default.Component {
         const token = localStorage.getItem('token');
         console.log(username, token);
         _axiosDefault.default.post(`https://myflixchill.herokuapp.com/users/${username}/movies/${movie._id}`, {
+        }, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
