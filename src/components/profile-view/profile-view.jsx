@@ -3,6 +3,7 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import './profile-view.scss';
 import { Container, Card, Button, Row, Col, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Images from '../../../Images/*.png';
 
 export class ProfileView extends React.Component {
@@ -77,7 +78,7 @@ export class ProfileView extends React.Component {
                     Username: response.data.Username,
                     Password: response.data.Password,
                     Email: response.data.Email,
-                    Birthday: response.data.Birthday,
+                    Birthday: response.data.DateOfBirth,
                 });
 
                 localStorage.setItem('user', this.state.Username);
@@ -240,7 +241,7 @@ export class ProfileView extends React.Component {
                 </Row>
                 <Row style={{ marginTop: "20px" }}>
                     <Col>
-                        <h4>{Username} Favorite Movies</h4>
+                        <h4>{Username} Favorite Movies:</h4>
                     </Col>
                 </Row>
                 <Row>
@@ -278,19 +279,20 @@ export class ProfileView extends React.Component {
                     </Col>
                 </Row>
                 <div className="backButton">
-                    <Button variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
+                    <button variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</button>
                 </div>
-                <br />
+                <br/>
             </Container>
         );
     }
 }
 
 ProfileView.propTypes = {
-  movie: PropTypes.shape({
+movies: PropTypes.arrayOf(PropTypes.shape({
     Title: PropTypes.string.isRequired,
+    Description: PropTypes.string.isRequired,
     ImagePath: PropTypes.string.isRequired,
-}).isRequired,
+})).isRequired,
 onBackClick: PropTypes.func.isRequired
 };
 
