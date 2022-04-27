@@ -83,7 +83,6 @@ export class ProfileView extends React.Component {
 
                 localStorage.setItem('user', this.state.Username);
                 alert("Profile updated");
-                window.open('/profile', '_self');
             })
             .catch(function (error) {
                 console.log(error);
@@ -160,7 +159,7 @@ export class ProfileView extends React.Component {
 
     render() {
         const { movies } = this.props;
-        const { FavoriteMovies, Username, Email, DateOfBirth } = this.state;
+        const { FavoriteMovies, Username, Password, Email, DateOfBirth } = this.state;
 
         if (!Username) {
             return null;
@@ -175,15 +174,7 @@ export class ProfileView extends React.Component {
                                 <Card.Title>Profile</Card.Title>
                                 <Form
                                     className="update-form"
-                                    onSubmit={(e) =>
-                                        this.editUser(
-                                            e,
-                                            this.Username,
-                                            this.Password,
-                                            this.Email,
-                                            this.DateOfBirth
-                                        )
-                                    }
+                                    onSubmit={this.editUser} 
                                 >
                                     <Form.Group>
                                         <Form.Label>Username</Form.Label>
@@ -203,7 +194,7 @@ export class ProfileView extends React.Component {
                                             type="password"
                                             name="Password"
                                             placeholder="New Password"
-                                            value={""}
+                                            value={Password}
                                             onChange={(e) => this.setPassword(e.target.value)}
                                             required
                                         />
@@ -231,7 +222,7 @@ export class ProfileView extends React.Component {
                                         />
                                     </Form.Group>
                                     <div className="mt-3">
-                                        <Button variant="success" type="submit" onClick={this.editUser}>Update User</Button>
+                                        <Button variant="success" type="submit">Update User</Button>
                                         <Button className="ml-3" variant="secondary" onClick={() => this.onDeleteUser()}>Delete User</Button>
                                     </div>
                                 </Form>
