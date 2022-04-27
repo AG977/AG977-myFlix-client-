@@ -122,7 +122,9 @@ div.favorite-movie.card-content.card {
 div.col {
   padding: 50px;
 }
-
+a.navbar-logo.navbar-brand {
+  color: #daa520;
+}
 .my-flix {
   color: #000;
 }
