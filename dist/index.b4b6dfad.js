@@ -24719,7 +24719,7 @@ function RegistrationView(props) {
             Username: username,
             Password: password,
             Email: email,
-            Birthday: dateofbirth
+            Birthday: DateOfBirth
         }).then((response)=>{
             const data = response.data;
         //console.log(data);
@@ -24862,7 +24862,7 @@ function RegistrationView(props) {
                                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
                                                     type: "date",
                                                     placeholder: "Enter your date of birth",
-                                                    value: dateofbirth,
+                                                    value: DateOfBirth,
                                                     onChange: (e)=>setDateOfBirth(e.target.value)
                                                     ,
                                                     required: true
@@ -24932,7 +24932,7 @@ RegistrationView.propTypes = {
         Username: _propTypesDefault.default.string.isRequired,
         password: _propTypesDefault.default.string.isRequired,
         email: _propTypesDefault.default.string.isRequired,
-        dateofbirth: _propTypesDefault.default.object.isRequired
+        DateOfBirth: _propTypesDefault.default.object.isRequired
     }),
     onRegistration: _propTypesDefault.default.func
 };
@@ -35354,7 +35354,7 @@ class ProfileView extends _reactDefault.default.Component {
             Username: this.state.Username,
             Password: this.state.Password,
             Email: this.state.Email,
-            Birthday: this.state.DateOfBirth
+            DateOfBirth: this.state.DateOfBirth
         }, {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -35364,7 +35364,7 @@ class ProfileView extends _reactDefault.default.Component {
                 Username: response.data.Username,
                 Password: response.data.Password,
                 Email: response.data.Email,
-                Birthday: response.data.DateOfBirth
+                DateOfBirth: response.data.DateOfBirth
             });
             localStorage.setItem('user', this.state.Username);
             alert("Profile updated");
@@ -35423,14 +35423,14 @@ class ProfileView extends _reactDefault.default.Component {
             Email: value
         });
     }
-    setBirthday(value) {
+    setDateOfBirth(value) {
         this.setState({
-            Birthday: value
+            DateOfBirth: value
         });
     }
     render() {
         const { movies  } = this.props;
-        const { FavoriteMovies , Username , Email , Birthday  } = this.state;
+        const { FavoriteMovies , Username , Email , DateOfBirth  } = this.state;
         if (!Username) return null;
         return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Container, {
             className: "profile-view",
@@ -35451,7 +35451,7 @@ class ProfileView extends _reactDefault.default.Component {
                                     }, this),
                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form, {
                                         className: "update-form",
-                                        onSubmit: (e)=>this.editUser(e, this.Username, this.Password, this.Email, this.Birthday)
+                                        onSubmit: (e)=>this.editUser(e, this.Username, this.Password, this.Email, this.DateOfBirth)
                                         ,
                                         children: [
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Group, {
@@ -35541,7 +35541,7 @@ class ProfileView extends _reactDefault.default.Component {
                                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Group, {
                                                 children: [
                                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Label, {
-                                                        children: "Birthday"
+                                                        children: "DateOfBirth"
                                                     }, void 0, false, {
                                                         fileName: "src/components/profile-view/profile-view.jsx",
                                                         lineNumber: 225,
@@ -35550,8 +35550,8 @@ class ProfileView extends _reactDefault.default.Component {
                                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
                                                         type: "date",
                                                         name: "Birthday",
-                                                        value: Birthday,
-                                                        onChange: (e)=>this.setBirthday(e.target.value)
+                                                        value: DateOfBirth,
+                                                        onChange: (e)=>this.setDateOfBirth(e.target.value)
                                                     }, void 0, false, {
                                                         fileName: "src/components/profile-view/profile-view.jsx",
                                                         lineNumber: 226,

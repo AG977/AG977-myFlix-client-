@@ -67,7 +67,7 @@ export class ProfileView extends React.Component {
                     Username: this.state.Username,
                     Password: this.state.Password,
                     Email: this.state.Email,
-                    Birthday: this.state.DateOfBirth,
+                    DateOfBirth: this.state.DateOfBirth,
                 },
                 {
                     headers: { Authorization: `Bearer ${token}` },
@@ -78,7 +78,7 @@ export class ProfileView extends React.Component {
                     Username: response.data.Username,
                     Password: response.data.Password,
                     Email: response.data.Email,
-                    Birthday: response.data.DateOfBirth,
+                    DateOfBirth: response.data.DateOfBirth,
                 });
 
                 localStorage.setItem('user', this.state.Username);
@@ -152,15 +152,15 @@ export class ProfileView extends React.Component {
         });
     }
 
-    setBirthday(value) {
+    setDateOfBirth(value) {
         this.setState({
-            Birthday: value,
+            DateOfBirth: value,
         });
     }
 
     render() {
         const { movies } = this.props;
-        const { FavoriteMovies, Username, Email, Birthday } = this.state;
+        const { FavoriteMovies, Username, Email, DateOfBirth } = this.state;
 
         if (!Username) {
             return null;
@@ -181,7 +181,7 @@ export class ProfileView extends React.Component {
                                             this.Username,
                                             this.Password,
                                             this.Email,
-                                            this.Birthday
+                                            this.DateOfBirth
                                         )
                                     }
                                 >
@@ -222,12 +222,12 @@ export class ProfileView extends React.Component {
                                     </Form.Group>
 
                                     <Form.Group>
-                                        <Form.Label>Birthday</Form.Label>
+                                        <Form.Label>DateOfBirth</Form.Label>
                                         <Form.Control
                                             type="date"
                                             name="Birthday"
-                                            value={Birthday}
-                                            onChange={(e) => this.setBirthday(e.target.value)}
+                                            value={DateOfBirth}
+                                            onChange={(e) => this.setDateOfBirth(e.target.value)}
                                         />
                                     </Form.Group>
                                     <div className="mt-3">

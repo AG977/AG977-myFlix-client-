@@ -52,7 +52,7 @@ export function RegistrationView(props) {
       Username: username,
       Password: password,
       Email: email,
-      Birthday: dateofbirth
+      Birthday: DateOfBirth
     })
     .then(response => {
       const data = response.data;
@@ -118,7 +118,7 @@ export function RegistrationView(props) {
                     <Form.Control
                       type="date" 
                       placeholder="Enter your date of birth"
-                      value={dateofbirth} 
+                      value={DateOfBirth} 
                       onChange={e => setDateOfBirth(e.target.value)}
                       required 
                     />
@@ -145,7 +145,7 @@ RegistrationView.propTypes = {
       Username: PropTypes.string.isRequired,
       password: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
-      dateofbirth: PropTypes.object.isRequired
+      DateOfBirth: PropTypes.object.isRequired
     }),
     onRegistration: PropTypes.func,
   };
