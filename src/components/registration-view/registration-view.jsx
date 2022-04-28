@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Form, Button, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
 import './registration-view.scss';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
 
 export function RegistrationView(props) {
   const [ username, setUsername ] = useState('');
@@ -70,9 +69,9 @@ export function RegistrationView(props) {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col className="registrationcol">
           <CardGroup>
-            <Card>
+            <Card className="registrationcard">
               <Card.Body>
                 <Card.Title>Welcome to the registration page!</Card.Title>
                 <Form>
