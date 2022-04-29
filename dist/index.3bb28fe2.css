@@ -3,49 +3,42 @@ button.btn.btn-primary {
   background: #daa520;
 }
 
-html {
-  background: #000;
+html, div.app-container {
   color: #daa520;
-}
-
-div.app-container {
   background: #000;
-  color: #daa520;
 }
 
 div.card-body {
   border-color: #daa520;
 }
 
-link,
-a {
+link, a {
   color: #000;
 }
 
 div.col {
-  padding: 25% 0 45% 0;
+  padding: 25% 0 45%;
 }
 
-.registrationcardcard,
-.registrationcol {
+.registrationcardcard, .registrationcol {
   min-height: fit-content;
 }
+
 button.btn.btn-primary {
   color: #000;
   background: #daa520;
 }
 
 html {
-  background: #000;
   color: #daa520;
+  background: #000;
 }
 
-div.card-body,
-div.login.card {
+div.card-body, div.login.card {
   min-height: fit-content;
-  padding: 10px;
-  border-color: #daa520;
   background: #000;
+  border-color: #daa520;
+  padding: 10px;
 }
 
 .login {
@@ -53,44 +46,78 @@ div.login.card {
   padding: 4px;
 }
 
-link,
-a {
+link, a {
   color: #000;
 }
 
-.login-padding {
-  padding: 30% 30% 30% 30%;
+.login-padding, div.login-padding.col {
+  padding: 30%;
 }
 
-div.login-padding.col {
-  padding: 30% 30% 30% 30%;
-}
 div.card {
   min-height: 850px;
-  padding: 10px;
-  border-color: #daa520;
   background: #000;
+  border-color: #daa520;
+  padding: 10px;
 }
+
 div.card {
   max-height: 1000px;
-  padding: 10px;
-  border-color: #daa520;
   background: #000;
+  border-color: #daa520;
+  padding: 10px;
 }
 
 img.img-fluid {
   height: 270px;
   width: 200px;
-  display: block;
-  align-items: center;
-  justify-content: center;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   padding: 40px;
+  display: block;
 }
-html {
+
+
+
+
+
+div.update-profile.card {
+  min-height: fit-content;
   background: #000;
+  border-color: #daa520;
+  padding: 10px;
+}
+
+div.favorite-movie.card-content.card {
+  min-height: 420px;
+  min-width: 172px;
+  background: #000;
+  border-color: #daa520;
+  padding: 10px;
+}
+
+img.card-img-top.fav-poster, div.favorite-movie.card-content.card {
+  height: 220px;
+  width: 150px;
+  background: #000;
+  border-color: #daa520;
+  padding: 10px;
+  display: block;
+}
+
+div.col {
+  padding: 50px;
+}
+
+a.navbar-logo.navbar-brand {
   color: #daa520;
+}
+
+html {
+  color: #daa520;
+  background: #000;
 }
 
 nav.main-nav.navbar.navbar-expand-lg.navbar-dark.bg-Dark.sticky-top {
@@ -98,39 +125,8 @@ nav.main-nav.navbar.navbar-expand-lg.navbar-dark.bg-Dark.sticky-top {
   position: static;
 }
 
-
-div.update-profile.card {
-  min-height: fit-content;
-  padding: 10px;
-  border-color: #daa520;
-  background: #000;
-}
-
-div.favorite-movie.card-content.card {
-  min-height: 420px;
-  min-width: 172px;
-  padding: 10px;
-  border-color: #daa520;
-  background: #000;
-}
-
-img.card-img-top.fav-poster,
-div.favorite-movie.card-content.card {
-  padding: 10px;
-  border-color: #daa520;
-  background: #000;
-  height: 220px;
-  width: 150px;
-  display: block;
-}
-
-div.col {
-  padding: 50px;
-}
-a.navbar-logo.navbar-brand {
-  color: #daa520;
-}
 .my-flix {
   color: #000;
 }
+
 /*# sourceMappingURL=index.3bb28fe2.css.map */

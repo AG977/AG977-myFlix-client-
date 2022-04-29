@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Form, Button, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
 import './registration-view.scss';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 export function RegistrationView(props) {
   const [ username, setUsername ] = useState('');
@@ -13,6 +14,7 @@ export function RegistrationView(props) {
   const [ usernameErr, setUsernameErr ] = useState('');
   const [ passwordErr, setPasswordErr ] = useState('');
   const [ emailErr, setEmailErr ] = useState('');
+  const history = useHistory();
  
    const validate = () => {
     let isReq = true;
@@ -20,15 +22,15 @@ export function RegistrationView(props) {
     if(!username){
         setUsernameErr('Username required');
         isReq = false;
-    }else if(username.length < 2){
-        setUsernameErr('Username must be at least 2 characters long');
+    }else if(username.length < 5){
+        setUsernameErr('Username must be at least 5 characters long');
         isReq = false;
     }
     if(!password){
         setPasswordErr('Password required');
         isReq = false;
-    }else if(password.length < 6){
-        setPassword('Password must be at least 6 characters long');
+    }else if(password.length < 5){
+        setPassword('Password must be at least 5 characters long');
         isReq = false;
     }
     if(!email){
@@ -55,6 +57,7 @@ export function RegistrationView(props) {
     })
     .then(response => {
       const data = response.data;
+      history.push('/')
       //console.log(data);
       //window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
       //const data = () => {
