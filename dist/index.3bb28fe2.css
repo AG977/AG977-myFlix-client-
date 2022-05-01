@@ -20,7 +20,8 @@ div.col {
   padding: 25% 0 45%;
 }
 
-.registrationcardcard, .registrationcol {
+div.registrationcard.card {
+  height: 400px;
   min-height: fit-content;
 }
 
