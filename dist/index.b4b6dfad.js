@@ -27579,7 +27579,7 @@ function RegistrationView(props) {
             Username: username,
             Password: password,
             Email: email,
-            Birthday: DateOfBirth
+            DateOfBirth: DateOfBirth
         }).then((response)=>{
             const data = response.data;
             history.push('/');
@@ -27711,7 +27711,7 @@ function RegistrationView(props) {
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Group, {
                                             children: [
                                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Label, {
-                                                    children: "dateofbirth:"
+                                                    children: "DateOfBirth:"
                                                 }, void 0, false, {
                                                     fileName: "src/components/registration-view/registration-view.jsx",
                                                     lineNumber: 114,
@@ -27806,7 +27806,7 @@ $RefreshReg$(_c, "RegistrationView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","react-bootstrap":"3AD9A","./registration-view.scss":"clIxH","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"cHIiW"}],"3AD9A":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","react-bootstrap":"3AD9A","./registration-view.scss":"clIxH","axios":"jo6P5","react-router-dom":"cHIiW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3AD9A":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Accordion", ()=>_accordionDefault.default
@@ -34938,9 +34938,9 @@ class ProfileView extends _reactDefault.default.Component {
                                                     }, this),
                                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
                                                         type: "password",
-                                                        name: "Password",
+                                                        name: "password",
                                                         placeholder: "New Password",
-                                                        value: Password,
+                                                        //value={Password} 
                                                         onChange: (e)=>this.setPassword(e.target.value)
                                                         ,
                                                         required: true
@@ -34994,7 +34994,7 @@ class ProfileView extends _reactDefault.default.Component {
                                                     }, this),
                                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Control, {
                                                         type: "date",
-                                                        name: "Birthday",
+                                                        name: "DateOfBirth",
                                                         value: DateOfBirth,
                                                         onChange: (e)=>this.setDateOfBirth(e.target.value)
                                                     }, void 0, false, {

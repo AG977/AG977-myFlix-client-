@@ -192,9 +192,9 @@ export class ProfileView extends React.Component {
                                         <Form.Label>Password</Form.Label>
                                         <Form.Control
                                             type="password"
-                                            name="Password"
+                                            name="password"
                                             placeholder="New Password"
-                                            value={Password} 
+                                            //value={Password} 
                                             onChange={(e) => this.setPassword(e.target.value)}
                                             required
                                         />
@@ -216,7 +216,7 @@ export class ProfileView extends React.Component {
                                         <Form.Label>DateOfBirth</Form.Label>
                                         <Form.Control
                                             type="date"
-                                            name="Birthday"
+                                            name="DateOfBirth"
                                             value={DateOfBirth}
                                             onChange={(e) => this.setDateOfBirth(e.target.value)}
                                         />
