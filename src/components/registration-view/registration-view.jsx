@@ -53,11 +53,11 @@ export function RegistrationView(props) {
       Username: username,
       Password: password,
       Email: email,
-      Birthday: DateOfBirth
+      DateOfBirth: DateOfBirth
     })
     .then(response => {
       const data = response.data;
-      history.push('/')
+      history.push('/') 
     })
     .catch(e => {
       console.log('error registering the user')
@@ -111,7 +111,7 @@ export function RegistrationView(props) {
                   </Form.Group>
           
                   <Form.Group>
-                    <Form.Label>dateofbirth:</Form.Label>
+                    <Form.Label>DateOfBirth:</Form.Label>
                     <Form.Control
                       type="date" 
                       placeholder="Enter your date of birth"
