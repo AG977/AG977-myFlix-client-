@@ -19,11 +19,11 @@ export class DirectorView extends React.Component {
         </div>
         <div className="director-birth-year">
           <span className="label">Birth Year: </span>
-          <span className="value">{director.BirthYear}</span>
+          <span className="value">{director.BirthYear.split("T")[0]}</span>
         </div>
         <div className="director-death-year">
           <span className="label">Death Year: </span>
-          <span className="value">{director.DeathYear}</span>
+          <span className="value">{director.DeathYear ? director.DeathYear.split("T")[0] : "Still alive!" }</span>
         </div>
         <button onClick={() => { onBackClick(null); }}>Back</button>
       </div>
