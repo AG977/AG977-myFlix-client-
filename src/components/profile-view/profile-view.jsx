@@ -40,11 +40,12 @@ export class ProfileView extends React.Component {
                 headers: { Authorization: `Bearer ${token}` },
             })
             .then((response) => {
+                console.log (response)
                 this.setState({
                     Username: response.data.Username,
-                    Password: response.data.Password,
+                    Password:"",
                     Email: response.data.Email,
-                    DateOfBirth: response.data.DateOfBirth,
+                    DateOfBirth: response.data.DateOfBirth.split("T")[0],
                     FavoriteMovies: response.data.FavoriteMovies,
                 });
             })
@@ -194,7 +195,8 @@ export class ProfileView extends React.Component {
                                             type="password"
                                             name="password"
                                             placeholder="New Password"
-                                            //value={Password} 
+                                            value={Password} 
+                                            autoComplete="off"
                                             onChange={(e) => this.setPassword(e.target.value)}
                                             required
                                         />
