@@ -2,6 +2,11 @@ import React from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
+import { connect } from 'react-redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { setMovies } from '../../actions/actions';
+import MoviesList from '../movies-list/movies-list';
+
 import { RegistrationView } from '../registration-view/registration-view';
 import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
@@ -20,7 +25,6 @@ class MainView extends React.Component {
   constructor(){
     super();
     this.state = {
-      movies: [],
       user: null
     };
   }
@@ -51,10 +55,7 @@ class MainView extends React.Component {
       headers: { Authorization: `Bearer ${token}`}
     })
     .then(response => {
-      // Assign the result to the state
-      this.setState({
-        movies: response.data
-      });
+      this.props.setMovies(response.data);
     })
     .catch(function (error) {
       console.log(error);
@@ -93,7 +94,8 @@ class MainView extends React.Component {
   };
 
   render() {
-    const { movies, user } = this.state;
+    let { movies } = this.props;
+    let { user } = this.state;
     return (
       <Router>
         <NavbarView user={user}/>
@@ -104,6 +106,8 @@ class MainView extends React.Component {
             <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
+            return <MoviesList movies={movies}/>;
+          }} />
             return movies.map(m => (
               <Col xs ={12} sm={6} md={4} lg={3} flex-fill="true" align-items-stretch="true" key={m._id}>
                 <MovieCard movie={m} addFavoriteMovies = {this.addFavoriteMovies} />
@@ -173,5 +177,11 @@ class MainView extends React.Component {
   }
 }
 
-export default MainView;
+let mapStateToProps = state => {
+  return { movies: state.movies }
+}
+
+export default connect(mapStateToProps, { setMovies } )(MainView);
+
+
 
