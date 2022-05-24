@@ -29173,7 +29173,7 @@ const mapStateToProps = (state)=>{
     };
 };
 function MoviesList(props) {
-    const { movies , visibilityFilter , favorites , getFavorites  } = props;
+    const { movies , visibilityFilter , addFavoriteMovies  } = props;
     let filteredMovies = movies;
     if (visibilityFilter !== '') filteredMovies = movies.filter((m)=>m.Title.toLowerCase().includes(visibilityFilter.toLowerCase())
     );
@@ -29206,7 +29206,8 @@ function MoviesList(props) {
             filteredMovies.map((m)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_colDefault.default, {
                     md: 3,
                     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_movieCard.MovieCard, {
-                        movie: m
+                        movie: m,
+                        addFavoriteMovies: this.addFavoriteMovies
                     }, void 0, false, {
                         fileName: "src/components/movies-list/movies-list.jsx",
                         lineNumber: 30,
@@ -29225,8 +29226,7 @@ _c = MoviesList;
 MoviesList.propTypes = {
     movies: _propTypesDefault.default.array.isRequired,
     visibilityFilter: _propTypesDefault.default.string.isRequired,
-    favorites: _propTypesDefault.default.array.isRequired,
-    getFavorites: _propTypesDefault.default.func.isRequired
+    addFavoriteMovies: _propTypesDefault.default.func.isRequired
 };
 exports.default = _reactRedux.connect(mapStateToProps)(MoviesList);
 var _c;

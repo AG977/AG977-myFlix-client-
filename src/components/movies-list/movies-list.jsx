@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 };
 
 function MoviesList(props) {
-  const { movies, visibilityFilter, favorites, getFavorites  } = props;
+  const { movies, visibilityFilter, addFavoriteMovies } = props;
   let filteredMovies = movies;
 
   if (visibilityFilter !== '') {
@@ -27,7 +27,7 @@ function MoviesList(props) {
     </Col>
     {filteredMovies.map(m => (
       <Col md={3} key={m._id}>
-        <MovieCard movie={m} />
+        <MovieCard movie={m} addFavoriteMovies = {this.addFavoriteMovies}/>
       </Col>
     ))}
   </>;
@@ -36,8 +36,8 @@ function MoviesList(props) {
 MoviesList.propTypes = {
   movies: PropTypes.array.isRequired,
   visibilityFilter: PropTypes.string.isRequired,
-  favorites: PropTypes.array.isRequired,
-  getFavorites: PropTypes.func.isRequired,
+  addFavoriteMovies: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps)(MoviesList);
+
