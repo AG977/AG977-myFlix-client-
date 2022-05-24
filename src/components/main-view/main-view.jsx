@@ -16,13 +16,7 @@ import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
 import { NavbarView } from '../navbar-view/navbar-view';
-import {
-  setMovies,
-  setUser,
-  setFavorites,
-  setDirectors,
-  setGenres,
-} from '../../actions/actions';
+import { setMovies } from '../../actions/actions';
 
 import { Col, Row, Container } from 'react-bootstrap';
 import './main-view.scss';
