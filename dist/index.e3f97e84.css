@@ -1,0 +1,133 @@
+div.card {
+  min-height: 850px;
+  background: #000;
+  border-color: #daa520;
+  padding: 10px;
+}
+
+button.btn.btn-primary {
+  color: #000;
+  background: #daa520;
+}
+
+html, div.app-container {
+  color: #daa520;
+  background: #000;
+}
+
+div.card-body {
+  border-color: #daa520;
+}
+
+link, a {
+  color: #000;
+}
+
+div.col {
+  padding: 25% 0 45%;
+}
+
+div.registrationcard.card {
+  height: 400px;
+  min-height: fit-content;
+}
+
+button.btn.btn-primary {
+  color: #000;
+  background: #daa520;
+}
+
+html {
+  color: #daa520;
+  background: #000;
+}
+
+div.card-body, div.login.card {
+  min-height: fit-content;
+  background: #000;
+  border-color: #daa520;
+  padding: 10px;
+}
+
+.login {
+  min-height: fit-content;
+  padding: 4px;
+}
+
+link, a {
+  color: #000;
+}
+
+.login-padding, div.login-padding.col {
+  padding: 30%;
+}
+
+div.card {
+  max-height: 1000px;
+  background: #000;
+  border-color: #daa520;
+  padding: 10px;
+}
+
+img.img-fluid {
+  height: 270px;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 40px;
+  display: block;
+}
+
+
+
+
+
+div.update-profile.card {
+  min-height: fit-content;
+  background: #000;
+  border-color: #daa520;
+  padding: 10px;
+}
+
+div.favorite-movie.card-content.card {
+  min-height: 420px;
+  min-width: 172px;
+  background: #000;
+  border-color: #daa520;
+  padding: 10px;
+}
+
+img.card-img-top.fav-poster, div.favorite-movie.card-content.card {
+  height: 220px;
+  width: 150px;
+  background: #000;
+  border-color: #daa520;
+  padding: 10px;
+  display: block;
+}
+
+div.col {
+  padding: 50px;
+}
+
+a.navbar-logo.navbar-brand {
+  color: #daa520;
+}
+
+html {
+  color: #daa520;
+  background: #000;
+}
+
+nav.main-nav.navbar.navbar-expand-lg.navbar-dark.bg-Dark.sticky-top {
+  padding: 5%;
+  position: static;
+}
+
+.my-flix {
+  color: #000;
+}
+
+/*# sourceMappingURL=index.e3f97e84.css.map */
