@@ -49,5 +49,15 @@ description)
 
 ##  *How to run this project:*
 1. Requires Parcel
-2. write now should run on a local server
+2. write now should run on a local server, as optional may be hosted online
+
+## *Tools:*
+1. Javascript
+2. React
+3. React-Redux
+4. Parcel
+5. React-Bootstrap
+6. Redux
+7. HTML
+8. CSS
 
