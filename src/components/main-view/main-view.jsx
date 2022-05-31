@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
@@ -10,13 +9,12 @@ import MoviesList from '../movies-list/movies-list';
 
 import { RegistrationView } from '../registration-view/registration-view';
 import { LoginView } from '../login-view/login-view';
-//import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
 import { NavbarView } from '../navbar-view/navbar-view';
-import { setMovies } from '../../actions/actions';
+
 
 import { Col, Row, Container } from 'react-bootstrap';
 import './main-view.scss';
@@ -108,12 +106,7 @@ class MainView extends React.Component {
             <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
-            return <MoviesList movies={movies}/>;
-            //return movies.map(m => (
-             // <Col xs ={12} sm={6} md={4} lg={3} flex-fill="true" align-items-stretch="true" key={m._id}>
-                //<MovieCard movie={m} addFavoriteMovies = {this.addFavoriteMovies} />
-             // </Col>
-            //))
+            return <MoviesList movies={movies} addFavoriteMovies = {this.addFavoriteMovies}/>;
           }} />
 
           <Route path="/register" render={() => {
@@ -184,5 +177,5 @@ let mapStateToProps = state => {
 
 export default connect(mapStateToProps, { setMovies } )(MainView);
 
-//xport default MainView;
+
 
