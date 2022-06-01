@@ -107,7 +107,7 @@ div.update-profile.card {
 }
 
 div.favorite-movie.card-content.card {
-  min-height: 420px;
+  min-height: 500px;
   min-width: 172px;
   background: #000;
   border-color: #daa520;
