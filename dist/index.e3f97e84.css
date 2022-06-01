@@ -97,7 +97,9 @@ div.director-view {
   padding: 10%;
 }
 
-
+div.col-md-8 {
+  padding-top: 10%;
+}
 
 div.update-profile.card {
   min-height: fit-content;
